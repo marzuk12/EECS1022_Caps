@@ -46,7 +46,7 @@ public class CapsActivity extends AppCompatActivity
         }
         else
         {
-            String userAnswer = ((EditText) findViewById(R.id.answer)).getText().toString();
+            String userAnswer = ((EditText) findViewById(R.id.answer)).getText().toString().trim();
             if (userAnswer.equalsIgnoreCase(this.answer))
             {
                 this.score ++;
