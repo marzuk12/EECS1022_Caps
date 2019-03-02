@@ -59,7 +59,7 @@ public class CapsActivity extends AppCompatActivity
 
             this.log = tempLog + "\n" + this.log;
 
-            System.out.println(this.log);
+//            System.out.println(this.log);
 
             this.qNum++;
 
