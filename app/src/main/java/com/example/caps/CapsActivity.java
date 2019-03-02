@@ -63,6 +63,10 @@ public class CapsActivity extends AppCompatActivity
 
             this.qNum++;
 
+            String scoreString = "Score " + this.score;
+            ((TextView) findViewById(R.id.score)).setText(scoreString);
+            ((TextView) findViewById(R.id.log)).setText(this.log);
+
             if(qNum >= 10)
             {
                 String gameOver = "GAME OVER!";
@@ -72,10 +76,7 @@ public class CapsActivity extends AppCompatActivity
             else
             {
                 String qNumString = "Q# " + this.qNum;
-                String scoreString = "Score " + this.score;
                 ((TextView) findViewById(R.id.qNum)).setText(qNumString);
-                ((TextView) findViewById(R.id.score)).setText(scoreString);
-                ((TextView) findViewById(R.id.log)).setText(this.log);
                 ask();
             }
 
