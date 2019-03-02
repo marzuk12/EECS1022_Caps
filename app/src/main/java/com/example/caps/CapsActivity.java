@@ -3,6 +3,7 @@ package com.example.caps;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -66,6 +67,7 @@ public class CapsActivity extends AppCompatActivity
             {
                 String gameOver = "GAME OVER!";
                 ((TextView) findViewById(R.id.qNum)).setText(gameOver);
+                ((Button) findViewById(R.id.done)).setEnabled(false);
             }
             else
             {
