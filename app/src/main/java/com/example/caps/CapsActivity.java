@@ -34,6 +34,8 @@ public class CapsActivity extends AppCompatActivity
         String[] pieces = qa.split("[\\n]+");
         this.question = pieces[0];
         this.answer = pieces[1];
+
+        ((TextView) findViewById(R.id.question)).setText(this.question);
     }
 
     public void onDone(View v)
@@ -54,7 +56,7 @@ public class CapsActivity extends AppCompatActivity
             tempLog += "Your answer: " + userAnswer.toUpperCase() + "\n";
             tempLog += "Correct Answer: " + this.answer + "\n";
 
-            this.log = tempLog + this.log;
+            this.log = tempLog + "\n" + this.log;
 
             System.out.println(this.log);
 
@@ -71,6 +73,7 @@ public class CapsActivity extends AppCompatActivity
                 String scoreString = "Score " + this.score;
                 ((TextView) findViewById(R.id.qNum)).setText(qNumString);
                 ((TextView) findViewById(R.id.score)).setText(scoreString);
+                ((TextView) findViewById(R.id.log)).setText(this.log);
                 ask();
             }
 
