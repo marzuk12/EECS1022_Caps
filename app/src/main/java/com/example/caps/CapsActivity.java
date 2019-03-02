@@ -56,16 +56,21 @@ public class CapsActivity extends AppCompatActivity
 
             this.log = tempLog + this.log;
 
+            System.out.println(this.log);
+
             this.qNum++;
 
             if(qNum >= 10)
             {
-                ((TextView) findViewById(R.id.qNum)).setText("GAME OVER!");
+                String gameOver = "GAME OVER!";
+                ((TextView) findViewById(R.id.qNum)).setText(gameOver);
             }
             else
             {
-                ((TextView) findViewById(R.id.qNum)).setText("Q# " + this.qNum);
-                ((TextView) findViewById(R.id.score)).setText("Score " + this.score);
+                String qNumString = "Q# " + this.qNum;
+                String scoreString = "Score " + this.score;
+                ((TextView) findViewById(R.id.qNum)).setText(qNumString);
+                ((TextView) findViewById(R.id.score)).setText(scoreString);
                 ask();
             }
 
