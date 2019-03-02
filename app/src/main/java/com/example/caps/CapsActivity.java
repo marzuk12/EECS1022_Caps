@@ -31,7 +31,7 @@ public class CapsActivity extends AppCompatActivity
     private void ask()
     {
         String qa = game.qa();
-        String[] pieces = qa.split("[^A-Za-z]+");
+        String[] pieces = qa.split("[\\n]+");
         this.question = pieces[0];
         this.answer = pieces[1];
     }
